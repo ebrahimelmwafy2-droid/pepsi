@@ -1,0 +1,735 @@
+import { v4 as uuidv4 } from 'uuid';
+
+export const SECTION_TEMPLATES = [
+  {
+    id: 'hero-1',
+    name: 'Hero Banner',
+    category: 'Hero',
+    thumbnail: 'hero',
+    create: () => ({
+      id: uuidv4(),
+      type: 'section',
+      name: 'Hero Banner',
+      elements: [
+        {
+          id: uuidv4(),
+          type: 'heading',
+          content: { text: 'Build Something Amazing', level: 'h1' },
+          style: {
+            fontSize: '52px', fontWeight: '800', color: '#ffffff', textAlign: 'center',
+            lineHeight: '1.2', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'text',
+          content: { text: 'Create beautiful websites with our drag-and-drop page builder. No coding required.' },
+          style: {
+            fontSize: '20px', fontWeight: '400', color: '#ffffffcc', textAlign: 'center',
+            lineHeight: '1.6', fontFamily: 'inherit', marginTop: '0px', marginBottom: '20px',
+            marginLeft: 'auto', marginRight: 'auto', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', maxWidth: '600px',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'button',
+          content: { text: 'Get Started', link: '#', target: '_self', variant: 'filled' },
+          style: {
+            backgroundColor: '#ffffff', color: '#6c5ce7', fontSize: '18px', fontWeight: '700',
+            paddingTop: '16px', paddingBottom: '16px', paddingLeft: '40px', paddingRight: '40px',
+            borderRadius: '50px', textAlign: 'center', cursor: 'pointer', display: 'inline-block',
+            textDecoration: 'none', marginTop: '0px', marginBottom: '0px', marginLeft: '0px',
+            marginRight: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000',
+            opacity: '1', hoverBackgroundColor: '#f0f0f0',
+          },
+          visible: true, locked: false,
+        },
+      ],
+      style: {
+        backgroundColor: 'transparent', backgroundImage: '', backgroundSize: 'cover',
+        backgroundPosition: 'center', paddingTop: '100px', paddingBottom: '100px',
+        paddingLeft: '40px', paddingRight: '40px', minHeight: '400px',
+        maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto',
+        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+      },
+      sectionStyle: {
+        backgroundColor: '#6c5ce7',
+        backgroundImage: 'linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%)',
+        backgroundSize: 'cover', backgroundPosition: 'center',
+      },
+    }),
+  },
+  {
+    id: 'hero-2',
+    name: 'Hero with Image',
+    category: 'Hero',
+    thumbnail: 'hero-image',
+    create: () => ({
+      id: uuidv4(),
+      type: 'section',
+      name: 'Hero with Image',
+      elements: [
+        {
+          id: uuidv4(),
+          type: 'heading',
+          content: { text: 'Welcome to Our Website', level: 'h1' },
+          style: {
+            fontSize: '48px', fontWeight: '800', color: '#1a1a2e', textAlign: 'left',
+            lineHeight: '1.2', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'text',
+          content: { text: 'We help businesses grow online with powerful tools and beautiful designs.' },
+          style: {
+            fontSize: '18px', fontWeight: '400', color: '#666666', textAlign: 'left',
+            lineHeight: '1.7', fontFamily: 'inherit', marginTop: '0px', marginBottom: '20px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'button',
+          content: { text: 'Learn More', link: '#', target: '_self', variant: 'filled' },
+          style: {
+            backgroundColor: '#6c5ce7', color: '#ffffff', fontSize: '16px', fontWeight: '600',
+            paddingTop: '14px', paddingBottom: '14px', paddingLeft: '32px', paddingRight: '32px',
+            borderRadius: '8px', textAlign: 'center', cursor: 'pointer', display: 'inline-block',
+            textDecoration: 'none', marginTop: '0px', marginBottom: '0px', marginLeft: '0px',
+            marginRight: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000',
+            opacity: '1', hoverBackgroundColor: '#5a4bd1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'image',
+          content: {
+            src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+            alt: 'Hero Image', objectFit: 'cover', link: '',
+          },
+          style: {
+            width: '100%', height: 'auto', maxWidth: '100%', borderRadius: '12px',
+            marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px',
+            paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px',
+            backgroundColor: 'transparent', borderWidth: '0px', borderStyle: 'none',
+            borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+      ],
+      style: {
+        backgroundColor: 'transparent', backgroundImage: '', backgroundSize: 'cover',
+        backgroundPosition: 'center', paddingTop: '80px', paddingBottom: '80px',
+        paddingLeft: '40px', paddingRight: '40px', minHeight: '100px',
+        maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto',
+      },
+      sectionStyle: {
+        backgroundColor: '#f8f9fa', backgroundImage: '', backgroundSize: 'cover', backgroundPosition: 'center',
+      },
+    }),
+  },
+  {
+    id: 'features-1',
+    name: 'Features Grid',
+    category: 'Features',
+    thumbnail: 'features',
+    create: () => ({
+      id: uuidv4(),
+      type: 'section',
+      name: 'Features',
+      elements: [
+        {
+          id: uuidv4(),
+          type: 'heading',
+          content: { text: 'Our Features', level: 'h2' },
+          style: {
+            fontSize: '36px', fontWeight: '700', color: '#1a1a2e', textAlign: 'center',
+            lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '10px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'text',
+          content: { text: 'Discover what makes us different from the rest.' },
+          style: {
+            fontSize: '18px', fontWeight: '400', color: '#888888', textAlign: 'center',
+            lineHeight: '1.6', fontFamily: 'inherit', marginTop: '0px', marginBottom: '30px',
+            marginLeft: 'auto', marginRight: 'auto', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', maxWidth: '600px',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'grid',
+          content: {
+            columns: 3,
+            gap: '30px',
+            children: [
+              [
+                {
+                  id: uuidv4(), type: 'icon',
+                  content: { icon: 'MdRocket', size: '48px', link: '' },
+                  style: { color: '#6c5ce7', textAlign: 'center', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+                {
+                  id: uuidv4(), type: 'heading',
+                  content: { text: 'Fast Performance', level: 'h3' },
+                  style: { fontSize: '20px', fontWeight: '600', color: '#1a1a2e', textAlign: 'center', lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '5px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+                {
+                  id: uuidv4(), type: 'text',
+                  content: { text: 'Lightning-fast loading times for the best user experience.' },
+                  style: { fontSize: '14px', fontWeight: '400', color: '#888888', textAlign: 'center', lineHeight: '1.6', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '5px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+              ],
+              [
+                {
+                  id: uuidv4(), type: 'icon',
+                  content: { icon: 'MdSecurity', size: '48px', link: '' },
+                  style: { color: '#6c5ce7', textAlign: 'center', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+                {
+                  id: uuidv4(), type: 'heading',
+                  content: { text: 'Secure & Reliable', level: 'h3' },
+                  style: { fontSize: '20px', fontWeight: '600', color: '#1a1a2e', textAlign: 'center', lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '5px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+                {
+                  id: uuidv4(), type: 'text',
+                  content: { text: 'Enterprise-grade security to keep your data safe.' },
+                  style: { fontSize: '14px', fontWeight: '400', color: '#888888', textAlign: 'center', lineHeight: '1.6', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '5px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+              ],
+              [
+                {
+                  id: uuidv4(), type: 'icon',
+                  content: { icon: 'MdDevices', size: '48px', link: '' },
+                  style: { color: '#6c5ce7', textAlign: 'center', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+                {
+                  id: uuidv4(), type: 'heading',
+                  content: { text: 'Fully Responsive', level: 'h3' },
+                  style: { fontSize: '20px', fontWeight: '600', color: '#1a1a2e', textAlign: 'center', lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '5px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+                {
+                  id: uuidv4(), type: 'text',
+                  content: { text: 'Looks great on every device, from mobile to desktop.' },
+                  style: { fontSize: '14px', fontWeight: '400', color: '#888888', textAlign: 'center', lineHeight: '1.6', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '5px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+              ],
+            ],
+          },
+          style: {
+            width: '100%', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px',
+            paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px',
+            backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none',
+            borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+      ],
+      style: {
+        backgroundColor: 'transparent', backgroundImage: '', backgroundSize: 'cover',
+        backgroundPosition: 'center', paddingTop: '80px', paddingBottom: '80px',
+        paddingLeft: '40px', paddingRight: '40px', minHeight: '100px',
+        maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto',
+      },
+      sectionStyle: {
+        backgroundColor: '#ffffff', backgroundImage: '', backgroundSize: 'cover', backgroundPosition: 'center',
+      },
+    }),
+  },
+  {
+    id: 'about-1',
+    name: 'About Us',
+    category: 'About',
+    thumbnail: 'about',
+    create: () => ({
+      id: uuidv4(),
+      type: 'section',
+      name: 'About Us',
+      elements: [
+        {
+          id: uuidv4(),
+          type: 'heading',
+          content: { text: 'About Us', level: 'h2' },
+          style: {
+            fontSize: '36px', fontWeight: '700', color: '#1a1a2e', textAlign: 'center',
+            lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '10px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'text',
+          content: { text: 'We are a team of passionate developers and designers dedicated to creating the best web experiences. Our mission is to empower businesses with beautiful, functional websites that drive results.' },
+          style: {
+            fontSize: '18px', fontWeight: '400', color: '#666666', textAlign: 'center',
+            lineHeight: '1.8', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px',
+            marginLeft: 'auto', marginRight: 'auto', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', maxWidth: '700px',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'image',
+          content: {
+            src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=400&fit=crop',
+            alt: 'Our Team', objectFit: 'cover', link: '',
+          },
+          style: {
+            width: '100%', height: 'auto', maxWidth: '800px', borderRadius: '12px',
+            marginTop: '20px', marginBottom: '0px', marginLeft: 'auto', marginRight: 'auto',
+            paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px',
+            backgroundColor: 'transparent', borderWidth: '0px', borderStyle: 'none',
+            borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+      ],
+      style: {
+        backgroundColor: 'transparent', backgroundImage: '', backgroundSize: 'cover',
+        backgroundPosition: 'center', paddingTop: '80px', paddingBottom: '80px',
+        paddingLeft: '40px', paddingRight: '40px', minHeight: '100px',
+        maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto',
+      },
+      sectionStyle: {
+        backgroundColor: '#f8f9fa', backgroundImage: '', backgroundSize: 'cover', backgroundPosition: 'center',
+      },
+    }),
+  },
+  {
+    id: 'contact-1',
+    name: 'Contact Form',
+    category: 'Contact',
+    thumbnail: 'contact',
+    create: () => ({
+      id: uuidv4(),
+      type: 'section',
+      name: 'Contact Us',
+      elements: [
+        {
+          id: uuidv4(),
+          type: 'heading',
+          content: { text: 'Get In Touch', level: 'h2' },
+          style: {
+            fontSize: '36px', fontWeight: '700', color: '#1a1a2e', textAlign: 'center',
+            lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '10px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'text',
+          content: { text: 'Have a question or want to work together? Drop us a message!' },
+          style: {
+            fontSize: '18px', fontWeight: '400', color: '#888888', textAlign: 'center',
+            lineHeight: '1.6', fontFamily: 'inherit', marginTop: '0px', marginBottom: '20px',
+            marginLeft: 'auto', marginRight: 'auto', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', maxWidth: '600px',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'form',
+          content: {
+            fields: [
+              { id: uuidv4(), type: 'text', label: 'Your Name', placeholder: 'John Doe', required: true },
+              { id: uuidv4(), type: 'email', label: 'Email Address', placeholder: 'john@example.com', required: true },
+              { id: uuidv4(), type: 'text', label: 'Subject', placeholder: 'How can we help?', required: false },
+              { id: uuidv4(), type: 'textarea', label: 'Message', placeholder: 'Tell us more...', required: true },
+            ],
+            submitText: 'Send Message',
+            action: '#',
+          },
+          style: {
+            maxWidth: '500px', marginTop: '0px', marginBottom: '0px', marginLeft: 'auto', marginRight: 'auto',
+            paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px',
+            backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none',
+            borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+      ],
+      style: {
+        backgroundColor: 'transparent', backgroundImage: '', backgroundSize: 'cover',
+        backgroundPosition: 'center', paddingTop: '80px', paddingBottom: '80px',
+        paddingLeft: '40px', paddingRight: '40px', minHeight: '100px',
+        maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto',
+      },
+      sectionStyle: {
+        backgroundColor: '#ffffff', backgroundImage: '', backgroundSize: 'cover', backgroundPosition: 'center',
+      },
+    }),
+  },
+  {
+    id: 'gallery-1',
+    name: 'Image Gallery',
+    category: 'Gallery',
+    thumbnail: 'gallery',
+    create: () => ({
+      id: uuidv4(),
+      type: 'section',
+      name: 'Gallery',
+      elements: [
+        {
+          id: uuidv4(),
+          type: 'heading',
+          content: { text: 'Our Gallery', level: 'h2' },
+          style: {
+            fontSize: '36px', fontWeight: '700', color: '#1a1a2e', textAlign: 'center',
+            lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '20px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'gallery',
+          content: {
+            images: [
+              { src: 'https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=400&h=300&fit=crop', alt: 'Gallery 1' },
+              { src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop', alt: 'Gallery 2' },
+              { src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop', alt: 'Gallery 3' },
+              { src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop', alt: 'Gallery 4' },
+              { src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop', alt: 'Gallery 5' },
+              { src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop', alt: 'Gallery 6' },
+            ],
+            columns: 3,
+            gap: '15px',
+          },
+          style: {
+            width: '100%', borderRadius: '8px', marginTop: '0px', marginBottom: '0px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+      ],
+      style: {
+        backgroundColor: 'transparent', backgroundImage: '', backgroundSize: 'cover',
+        backgroundPosition: 'center', paddingTop: '80px', paddingBottom: '80px',
+        paddingLeft: '40px', paddingRight: '40px', minHeight: '100px',
+        maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto',
+      },
+      sectionStyle: {
+        backgroundColor: '#ffffff', backgroundImage: '', backgroundSize: 'cover', backgroundPosition: 'center',
+      },
+    }),
+  },
+  {
+    id: 'testimonial-1',
+    name: 'Testimonials',
+    category: 'Testimonials',
+    thumbnail: 'testimonials',
+    create: () => ({
+      id: uuidv4(),
+      type: 'section',
+      name: 'Testimonials',
+      elements: [
+        {
+          id: uuidv4(),
+          type: 'heading',
+          content: { text: 'What Our Clients Say', level: 'h2' },
+          style: {
+            fontSize: '36px', fontWeight: '700', color: '#1a1a2e', textAlign: 'center',
+            lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '30px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'grid',
+          content: {
+            columns: 2,
+            gap: '24px',
+            children: [
+              [
+                {
+                  id: uuidv4(), type: 'testimonial',
+                  content: {
+                    quote: 'Amazing service! They transformed our website completely. Our conversions increased by 200%.',
+                    author: 'Sarah Johnson', role: 'Marketing Director',
+                    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face',
+                    rating: 5,
+                  },
+                  style: {
+                    backgroundColor: '#ffffff', borderRadius: '12px', paddingTop: '30px', paddingBottom: '30px',
+                    paddingLeft: '30px', paddingRight: '30px', textAlign: 'center', marginTop: '0px',
+                    marginBottom: '0px', marginLeft: '0px', marginRight: '0px', borderWidth: '0px',
+                    borderStyle: 'none', borderColor: '#000000', opacity: '1',
+                    boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+                  },
+                  visible: true, locked: false,
+                },
+              ],
+              [
+                {
+                  id: uuidv4(), type: 'testimonial',
+                  content: {
+                    quote: 'Professional team with excellent communication. They delivered exactly what we needed, on time.',
+                    author: 'Michael Chen', role: 'Startup Founder',
+                    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
+                    rating: 5,
+                  },
+                  style: {
+                    backgroundColor: '#ffffff', borderRadius: '12px', paddingTop: '30px', paddingBottom: '30px',
+                    paddingLeft: '30px', paddingRight: '30px', textAlign: 'center', marginTop: '0px',
+                    marginBottom: '0px', marginLeft: '0px', marginRight: '0px', borderWidth: '0px',
+                    borderStyle: 'none', borderColor: '#000000', opacity: '1',
+                    boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+                  },
+                  visible: true, locked: false,
+                },
+              ],
+            ],
+          },
+          style: {
+            width: '100%', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px',
+            paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px',
+            backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none',
+            borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+      ],
+      style: {
+        backgroundColor: 'transparent', backgroundImage: '', backgroundSize: 'cover',
+        backgroundPosition: 'center', paddingTop: '80px', paddingBottom: '80px',
+        paddingLeft: '40px', paddingRight: '40px', minHeight: '100px',
+        maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto',
+      },
+      sectionStyle: {
+        backgroundColor: '#f8f9fa', backgroundImage: '', backgroundSize: 'cover', backgroundPosition: 'center',
+      },
+    }),
+  },
+  {
+    id: 'cta-1',
+    name: 'Call to Action',
+    category: 'CTA',
+    thumbnail: 'cta',
+    create: () => ({
+      id: uuidv4(),
+      type: 'section',
+      name: 'Call to Action',
+      elements: [
+        {
+          id: uuidv4(),
+          type: 'heading',
+          content: { text: 'Ready to Get Started?', level: 'h2' },
+          style: {
+            fontSize: '40px', fontWeight: '700', color: '#ffffff', textAlign: 'center',
+            lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '10px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'text',
+          content: { text: 'Join thousands of satisfied customers and take your business to the next level.' },
+          style: {
+            fontSize: '18px', fontWeight: '400', color: '#ffffffcc', textAlign: 'center',
+            lineHeight: '1.6', fontFamily: 'inherit', marginTop: '0px', marginBottom: '20px',
+            marginLeft: 'auto', marginRight: 'auto', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', maxWidth: '600px',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'button',
+          content: { text: 'Start Free Trial', link: '#', target: '_self', variant: 'filled' },
+          style: {
+            backgroundColor: '#ffffff', color: '#6c5ce7', fontSize: '18px', fontWeight: '700',
+            paddingTop: '16px', paddingBottom: '16px', paddingLeft: '48px', paddingRight: '48px',
+            borderRadius: '50px', textAlign: 'center', cursor: 'pointer', display: 'inline-block',
+            textDecoration: 'none', marginTop: '0px', marginBottom: '0px', marginLeft: '0px',
+            marginRight: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000',
+            opacity: '1', hoverBackgroundColor: '#f0f0f0',
+          },
+          visible: true, locked: false,
+        },
+      ],
+      style: {
+        backgroundColor: 'transparent', backgroundImage: '', backgroundSize: 'cover',
+        backgroundPosition: 'center', paddingTop: '80px', paddingBottom: '80px',
+        paddingLeft: '40px', paddingRight: '40px', minHeight: '100px',
+        maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto',
+        display: 'flex', flexDirection: 'column', alignItems: 'center',
+      },
+      sectionStyle: {
+        backgroundColor: '#6c5ce7',
+        backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        backgroundSize: 'cover', backgroundPosition: 'center',
+      },
+    }),
+  },
+  {
+    id: 'footer-1',
+    name: 'Footer',
+    category: 'Footer',
+    thumbnail: 'footer',
+    create: () => ({
+      id: uuidv4(),
+      type: 'section',
+      name: 'Footer',
+      elements: [
+        {
+          id: uuidv4(),
+          type: 'grid',
+          content: {
+            columns: 3,
+            gap: '40px',
+            children: [
+              [
+                {
+                  id: uuidv4(), type: 'heading',
+                  content: { text: 'Your Brand', level: 'h3' },
+                  style: { fontSize: '22px', fontWeight: '700', color: '#ffffff', textAlign: 'left', lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '5px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+                {
+                  id: uuidv4(), type: 'text',
+                  content: { text: 'Building amazing digital experiences since 2024.' },
+                  style: { fontSize: '14px', fontWeight: '400', color: '#ffffffaa', textAlign: 'left', lineHeight: '1.6', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '5px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+              ],
+              [
+                {
+                  id: uuidv4(), type: 'heading',
+                  content: { text: 'Quick Links', level: 'h4' },
+                  style: { fontSize: '18px', fontWeight: '600', color: '#ffffff', textAlign: 'left', lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '5px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+                {
+                  id: uuidv4(), type: 'list',
+                  content: { items: ['Home', 'About', 'Services', 'Contact'], listStyle: 'none', ordered: false },
+                  style: { fontSize: '14px', color: '#ffffffaa', lineHeight: '2.2', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '5px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+              ],
+              [
+                {
+                  id: uuidv4(), type: 'heading',
+                  content: { text: 'Follow Us', level: 'h4' },
+                  style: { fontSize: '18px', fontWeight: '600', color: '#ffffff', textAlign: 'left', lineHeight: '1.3', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '5px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+                {
+                  id: uuidv4(), type: 'social',
+                  content: {
+                    links: [
+                      { platform: 'facebook', url: '#' },
+                      { platform: 'twitter', url: '#' },
+                      { platform: 'instagram', url: '#' },
+                      { platform: 'linkedin', url: '#' },
+                    ],
+                    iconSize: '20px', iconColor: '#ffffff',
+                  },
+                  style: { display: 'flex', gap: '12px', justifyContent: 'flex-start', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1' },
+                  visible: true, locked: false,
+                },
+              ],
+            ],
+          },
+          style: {
+            width: '100%', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px',
+            paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px',
+            backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px', borderStyle: 'none',
+            borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'divider',
+          content: { width: '100%' },
+          style: {
+            borderTopWidth: '1px', borderTopStyle: 'solid', borderTopColor: '#ffffff33',
+            marginTop: '20px', marginBottom: '20px', paddingTop: '0px', paddingBottom: '0px',
+            paddingLeft: '0px', paddingRight: '0px', marginLeft: '0px', marginRight: '0px',
+            backgroundColor: 'transparent', borderRadius: '0px', borderWidth: '0px',
+            borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+        {
+          id: uuidv4(),
+          type: 'text',
+          content: { text: '\u00a9 2024 Your Brand. All rights reserved.' },
+          style: {
+            fontSize: '13px', fontWeight: '400', color: '#ffffff88', textAlign: 'center',
+            lineHeight: '1.6', fontFamily: 'inherit', marginTop: '0px', marginBottom: '0px',
+            marginLeft: '0px', marginRight: '0px', paddingTop: '10px', paddingBottom: '10px',
+            paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'transparent',
+            borderRadius: '0px', borderWidth: '0px', borderStyle: 'none', borderColor: '#000000', opacity: '1',
+          },
+          visible: true, locked: false,
+        },
+      ],
+      style: {
+        backgroundColor: 'transparent', backgroundImage: '', backgroundSize: 'cover',
+        backgroundPosition: 'center', paddingTop: '60px', paddingBottom: '40px',
+        paddingLeft: '40px', paddingRight: '40px', minHeight: '100px',
+        maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto',
+      },
+      sectionStyle: {
+        backgroundColor: '#1a1a2e', backgroundImage: '', backgroundSize: 'cover', backgroundPosition: 'center',
+      },
+    }),
+  },
+];
+
+export const SECTION_CATEGORIES = [...new Set(SECTION_TEMPLATES.map(t => t.category))];
